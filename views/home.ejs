@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <!-- 헤드 부분 -->
   <header>
     <nav class="navbar-expand">
       <div class="navbar navbar-dark bg-dark shadow-sm">
@@ -31,111 +32,43 @@
       </div>
     </nav>
   </header>
-  <main>
-    <section class="py-3 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">AI 도구 저장소</h1>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center mb-5">
-        <input type="text" class="form-control w-75" placeholder="검색창 - 원하시는 키워드를 검색해보세요" />
-      </div>
-      <div class="mb-3 d-flex justify-content-center">
-        <div class="w-75 row row-cols-6 align-content-between justify-content-start">
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">AI 감지기</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">재무</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">아바타</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">채팅</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">글쓰기</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">재미</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">게임</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">아트 생성기</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">코드 생성기</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">비디오 생성기</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100 for=" btn-check2">이미지 개선</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">이미지 검색</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">영감</label>
-          </div>
-          <div class="col mb-3">
-            <input type="checkbox" class="btn-check p-2" id="btn-check2" autocomplete="off" />
-            <label class="btn btn-primary w-100" for="btn-check2">마케팅</label>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="w-50 row justify-content-start">
-          <div class="col">
-            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">모션 캡쳐</label>
-          </div>
-          <div class="col">
-            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">음악</label>
-          </div>
-          <div class="col ">
-            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">팟 캐스트</label>
-          </div>
-          <div class="col">
-            <input type="checkbox" width="50px" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
-            <label class="btn btn-primary w-100" for="btn-check1">생산성</label>
-          </div>
-        </div>
+  <main class="py-3 text-center container">
+    <!-- 메인 제목 -->
+    <section class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">AI 도구 저장소</h1>
       </div>
     </section>
-
-    <div class="album py-5">
+    <!-- 검색창 -->
+    <section class="d-flex justify-content-center mb-5">
+      <input type="text" class="form-control w-75" placeholder="검색창 - 원하시는 키워드를 검색해보세요" />
+    </section>
+    <!-- 카테코리 부분 -->
+    <section class="mb-3 d-flex justify-content-center">
+      <div class="w-75 row row-cols-6 align-content-between justify-content-start">
+        <% for(category of categories) {%>
+        <div class="col mb-3">
+          <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" value="ai-detector" />
+          <label class="btn btn-primary w-100" for="btn-check1"><%= category.name %></label>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <!-- 앨범 부분 -->
+    <section class="album py-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+          <% for(site of sites) {%>
           <div class="col">
             <div class="card shadow-sm text-start align-items-center">
-              <a href="/sites"><img src="./img/logo.png" class="card-img-top border-bottom border-dark" style="height: 225px; width: 100%" alt="..." /></a>
+              <a href="/sites/<%=site._id%>"><img src="./img/logo.png" class="card-img-top border-bottom border-dark" style="height: 225px; width: 100%" alt="..." /></a>
               <div class="card-body row" style="width: 100%; height: 175px">
                 <p class="my-0 p-0 h5 card-title" style="height: 30px">
-                  툴 이름
+                  <%= site.name %>
                 </p>
                 <p class="my-0 p-0 card-text" style="height: 60px">툴 설명</p>
                 <div class="d-flex align-items-center justify-content-between px-0" style="width: 100%">
-                  <a href="/sites">
+                  <a href="/sites/<%=site._id%>">
                     <button type="button" class="d-inline btn btn-sm btn-outline-secondary">더보기</button>
                   </a>
                   <div class="col-8 d-inline text-end">
@@ -148,9 +81,10 @@
               </div>
             </div>
           </div>
+          <% } %>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="text-muted py-5"></footer>

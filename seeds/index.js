@@ -15,8 +15,11 @@ db.once("open", () => {
   console.log("데이터 베이스 연결 성공");
 });
 
+const sample = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
 const seedDB = async function () {
-  await Category.deleteMany({});
   await Site.deleteMany({});
   for (const name of categoryList) {
     const category = new Category({

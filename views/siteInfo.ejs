@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AITools</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/index.css">
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- 헤드 부분 -->
+  <header>
+    <nav class="navbar-expand">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex" style="height: 60px">
+          <a href="/" class="navbar-brand d-flex align-items-center text-center justify-content-around" style="width: 200px" aria="hoem">
+            <img src="/img/logo3.png" width="40" height="40" />
+            <strong class="flex-grow-1">AI 도구 모음</strong>
+          </a>
+          <div class="align-items-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="submit" href="/report">제보하기</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="title" class="justify-content-center align-items-center d-flex" style="height: 100px;">
+      <h1 class="h1"><%= CurrentSite[0].name%></h1>
+    </section>
+    <section id="detail" class="d-flex" style="height: 400px;">
+      <div class="card mb-3 w-100">
+        <div class="row g-0">
+          <div class="col-md-6 align-items-center">
+            <img src="/img/logo.png" class="rounded mx-auto d-block" style="height: 350px; width: 350px;">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">사이트 설명</h5>
+              <p class="card-text"><%= CurrentSite[0].description %> </p>
+              <div class="py-1">
+                <b>유/무료: <%= CurrentSite[0].price %></b>
+              </div>
+              <div class="py-1">
+                <b>카테고리: <%= CurrentSite[0].categories %></b>
+              </div>
+              <div class="py-2">
+                <a class="btn btn-primary" target="_blank" href="https://<%= CurrentSite[0].url %>">사이트 방문하기</a>
+              </div>
+              <div class="py-3 row">
+                <a href="/sites/<%= CurrentSite[0]._id %>/edit" class="btn btn-danger col-4">수정하기</a>
+                <form class="col-4" action="/sites/<%= CurrentSite[0]._id %>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger">삭제하기</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="album text-center" id="recommendSites">
+      <h3 class="py-3">비슷한 사이트 추천</h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+        <% for(site of sites) {%>
+        <div class="col">
+          <div class="card shadow-sm text-start align-items-center">
+            <a href="/sites/<%=site._id%>"><img src="/img/logo.png" class="card-img-top border-bottom border-dark" style="height: 225px; width: 100%" alt="..." /></a>
+            <div class="card-body row" style="width: 100%; height: 175px">
+              <p class="my-0 p-0 h5 card-title" style="height: 30px">
+                <%= site.name %>
+              </p>
+              <p class="my-0 p-0 card-text" style="height: 60px">툴 설명</p>
+              <div class="d-flex align-items-center justify-content-between px-0" style="width: 100%">
+                <a href="/sites/<%=site._id%>">
+                  <button type="button" class="d-inline btn btn-sm btn-outline-secondary">더보기</button>
+                </a>
+                <div class="col-8 d-inline text-end">
+                  <button type="button" class="m-auto btn btn-sm btn-outline-secondary">
+                    좋아요
+                  </button>
+                  <small class="text-muted">0</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-muted py-5"></footer>
+</body>
+
+</html>
+
+
+
+<!-- <div id="siteImage" class="bg-dark">
+        <img src="/img/logo.png" alt="">
+      </div>
+      <div id="siteDescription" class="bg-secondary">
+        <h2>Description</h2>
+        <p>
+          GPTGO is a search engine that combines Google search technology and Free ChatGPT artificial intelligence to provide users with a reliable and efficient search experience. It provides search results from Google as well as creative answers from Free ChatGPT, and offers unlimited usage of Free ChatGPT, fast speeds, and convenient copying and downloading of content. It is free to use and can be used on any device. It also ensures user privacy and security.
+        </p>
+        <div>
+          <b>Pricing Model:</b>
+        </div>
+        <div>
+          <b>Tags:</b>
+        </div>
+        <button type="button" class="btn btn-primary">visit website</button>
+      </div> -->
